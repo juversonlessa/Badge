@@ -12,3 +12,6 @@ Thumbs.db
 # Local
 .env
 .env.local
+
+# Tooling (logo scripts)
+scripts/node_modules/

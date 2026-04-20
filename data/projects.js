@@ -8,16 +8,18 @@ const projects = [
     name: "Training Time",
     description: "Application focused on training management and performance tracking. Helps users plan workouts, track progress, and achieve fitness goals with an intuitive interface.",
     tech: ["React", "Firebase"],
-    image: "images/projects/training-preview.png",
+    logo: "images/projects/training-time-logo.png",
+    /** Zoom past inner margins so the mark fills the tile (see .project-image-wrapper--logo-scaled) */
+    logoScale: 1.42,
     live: "https://trainingtime-fcdc6.web.app/",
     github: ""
   },
   {
-    name: "JBills",
-    description: "Financial management system with dashboard and business insights. Enables companies to track expenses, visualize financial data, and make data-driven decisions.",
+    name: "Aura Finance",
+    description: "Personal finance app with dashboard and insights. Track expenses, visualize your money, and make informed decisions—with a clean, intuitive experience.",
     tech: ["React", "Node.js", "Firebase"],
-    image: "images/projects/jbills-preview.png",
-    live: "https://jbills-ad5eb.web.app/dashboard",
+    logo: "images/projects/aura-finance-logo.png",
+    live: "https://jbills-ad5eb.web.app/",
     github: ""
   }
   // Add new projects below — same structure:
@@ -25,7 +27,8 @@ const projects = [
   //   name: "Project Name",
   //   description: "Problem + solution in 1-2 sentences.",
   //   tech: ["React", "Node.js"],
-  //   image: "images/projects/project-preview.png",
+  //   logo: "images/projects/project-logo.png",
+  //   logoScale: 1.35, // optional; >1 zooms logo to fill the tile (removes inner padding look)
   //   live: "https://...",
   //   github: "https://github.com/..." // optional
   // }

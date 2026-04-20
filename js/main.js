@@ -25,6 +25,15 @@
       .map(function (project) {
         const imgSrc = project.logo || project.image;
         const hasImage = !!imgSrc;
+        const isBrandLogo = !!project.logo;
+        const hasLogoScale = isBrandLogo && typeof project.logoScale === 'number' && project.logoScale > 0;
+        const imageWrapperClass =
+          'project-image-wrapper' +
+          (isBrandLogo ? ' project-image-wrapper--logo' : '') +
+          (hasLogoScale ? ' project-image-wrapper--logo-scaled' : '');
+        const logoScaleStyle = hasLogoScale
+          ? ' style="--project-logo-scale:' + String(project.logoScale) + '"'
+          : '';
         const imageHtml = hasImage
           ? '<img src="' + escapeHtml(imgSrc) + '" alt="' + escapeHtml(project.name) + ' logo" loading="lazy" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'flex\';">'
           : '';
@@ -53,7 +62,8 @@
         return (
           '<article class="project-card">' +
           cardLink +
-          '<div class="project-image-wrapper">' +
+          '<div class="project-card-row">' +
+          '<div class="' + imageWrapperClass + '"' + logoScaleStyle + '>' +
           imageHtml +
           placeholderHtml +
           '</div>' +
@@ -61,6 +71,7 @@
           '<h3 class="project-name">' + escapeHtml(project.name) + '</h3>' +
           '<p class="project-description">' + escapeHtml(project.description) + '</p>' +
           (techTags ? '<div class="project-tech">' + techTags + '</div>' : '') +
+          '</div>' +
           '</div>' +
           cardLinkClose +
           (githubBtn ? '<div class="project-links">' + githubBtn + '</div>' : '') +

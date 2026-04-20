@@ -22,9 +22,9 @@ badge/
 │   ├── jlcmkt.png
 │   ├── logoDevTec.svg
 │   ├── CAIES.svg
-│   └── projects/       # Project previews
-│       ├── training-preview.png
-│       └── jbills-preview.png
+│   └── projects/       # Project logos / previews
+│       ├── training-time-logo.png
+│       └── aura-finance-logo.png
 └── README.md
 ```
 
@@ -38,7 +38,7 @@ badge/
   name: "Project Name",
   description: "Short problem + solution description.",
   tech: ["React", "Node.js", "TypeScript"],
-  image: "images/projects/my-preview.png",
+  logo: "images/projects/my-logo.png",   // or `image` for full-bleed screenshots
   live: "https://...",
   github: "https://github.com/..."  // optional
 }

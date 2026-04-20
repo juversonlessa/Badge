@@ -1,0 +1,8 @@
+{
+  "name": "badge-logo-tools",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "jimp": "^1.6.0"
+  }
+}
